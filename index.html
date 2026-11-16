@@ -1,12 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>RookOverlay Analytics</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="RookOverlay Analytics: protótipo de análise retrospectiva de partidas concluídas de VALORANT.">
+<title>RookOverlay Analytics | Projeto em desenvolvimento</title>
+<style>
+:root{color-scheme:dark;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;background:#0b1120;color:#f1f5f9}main{max-width:1000px;margin:auto;padding:64px 24px}h1{font-size:clamp(2.2rem,6vw,4rem);letter-spacing:-.04em;margin:8px 0}h2{font-size:1.35rem;margin-top:36px}p,li{line-height:1.7;color:#cbd5e1}ul,ol{padding-left:22px}.tag{color:#67e8f9;text-transform:uppercase;letter-spacing:.1em;font-size:.78rem;font-weight:700}.panel{background:#151e30;border:1px solid #293549;border-radius:16px;padding:20px;margin:22px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}.grid>section{background:#141e2d;padding:20px;border-radius:12px}.muted{font-size:.9rem;color:#94a3b8}a{color:#67e8f9}code{color:#7dd3fc}footer{margin-top:55px;border-top:1px solid #334155;padding-top:22px;color:#94a3b8}
+</style>
 </head>
-<body>
-  <h1>RookOverlay Analytics</h1>
-  <p>Projeto em desenvolvimento para análise
-  de partidas concluídas do VALORANT.</p>
-</body>
-</html>
+<body><main>
+<div class="tag">Windows · C++ + Python · Protótipo</div>
+<h1>RookOverlay <span style="color:#67e8f9">Analytics</span></h1>
+<p>Ferramenta em desenvolvimento para estudar estatísticas de <strong>partidas concluídas de VALORANT</strong> com dados obtidos por meios autorizados.</p>
+<div class="panel"><strong>Status:</strong> proposta cadastrada e URL verificada no portal da Riot. <strong>Aprovação da API de produção pendente.</strong> Sem conexão ativa com Riot Sign On.</div>
+<h2>O que já existe</h2>
+<div class="grid">
+<section><strong>Importação</strong><p>Entrada local de JSON de partida concluída no formato oficial.</p></section>
+<section><strong>Estatísticas</strong><p>Eliminações, mortes, assistências, K/D e estimativa de pontos por rodada.</p></section>
+<section><strong>Relatórios</strong><p>Saída HTML para leitura e arquivos CSV/JSON para análise adicional.</p></section>
+</div>
+<h2>Como funciona</h2>
+<ol><li>O usuário obtém, de fonte autorizada, um JSON de partida concluída.</li><li>Importa o arquivo no aplicativo local.</li><li>O aplicativo processa as estatísticas e gera o relatório.</li><li>Após eventual aprovação, será desenvolvida conexão RSO com consentimento explícito do jogador.</li></ol>
+<h2>Limites do projeto</h2>
+<p>O módulo analítico não oferece posições ocultas de adversários, ESP ao vivo, orientação tática em tempo real ou interferência no Vanguard. Um módulo gráfico separado de overlay de desktop não recebe informações do jogo.</p>
+<h2>Privacidade</h2>
+<p>Dados de contas somente serão consultados por interfaces oficialmente autorizadas e com opt-in aplicável. A solução não solicita senhas da Riot.</p>
+<p><a href="https://developer.riotgames.com/docs/valorant">Documentação oficial da API VALORANT</a></p>
+<footer>Projeto independente, não afiliado, aprovado ou endossado pela Riot Games. VALORANT pertence a seus titulares.</footer>
+</main></body></html>
